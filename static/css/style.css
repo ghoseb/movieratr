@@ -1,0 +1,24 @@
+/* -----------------------------------------------------------------------
+   style.css
+----------------------------------------------------------------------- */
+
+a { color:#000; }
+a:focus, a:hover { color:#666; }
+
+/* UI */
+div#header { background: #ccc none; padding: 10px; margin-bottom: 10px; }
+
+div#main-navigation { margin: 0 auto 10px; overflow: hidden; height: 1%; padding: 10px 10px 0; background: #efefef; }
+div#main-navigation ul { list-style: none; text-align: center; }
+div#main-navigation ul li { display: inline; padding: 0 20px; font-size: 1.2em; }
+
+div#footer { overflow: hidden; height: 1%; background: #efefef none; padding: 10px 0; margin-top: 10px; }
+div#footer div.footer-content{ padding: 0 10px; }
+
+/* General */
+h1 { font-size: 2em; }
+h2 { font-size: 1.8em; }
+h3 { font-size: 1.6em; }
+h4 { font-size: 1.4em; }
+h5 { font-size: 1.2em; }
+h6 { font-size: 1em; }
