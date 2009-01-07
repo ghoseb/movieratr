@@ -33,10 +33,20 @@
 	  <!-- START: main-navigation -->
 	  <div id="main-navigation">
         {% block navbar %}
-		<ul>
-		  <li><a href="/request/">Request a movie</a></li>
-		  <li><a href="/manage/">Manage movie lists</a></li>
-		</ul>
+		  <ul>
+		    <li><a href="/request/">Request a movie</a></li>
+		    <li><a href="/manage/">Manage movie lists</a></li>
+            {% if is_admin %}
+            <li><a href="/admin/">Admin</a></li>
+            {% endif %}
+            {% if user %}
+            <!-- <li>Hello {{ user.nickname }}!</li> -->
+            <li><a href="{{ logout_url }}">Logout</a></li>
+            {% else %}
+            <!-- <li>Hello, Anonymous Coward!</li> -->
+            <li><a href="{{ login_url }}">Login</a></li>
+            {% endif %}
+		  </ul>
         {% endblock navbar %}
 	  </div><!-- END: main-navigation -->
       
@@ -75,7 +85,7 @@
           </div>
 		</div>
 		<div class="span-4 last">
-		  <div class="footer-content"><img src="http://code.google.com/appengine/images/appengine-silver-120x30.gif" alt="Powered by Google App Engine" /></div>
+		  <div class="footer-content"><a href="http://appengine.google.com"><img src="http://code.google.com/appengine/images/appengine-silver-120x30.gif" alt="Powered by Google App Engine" /></a></div>
 		</div>
         {% endblock footer %}
 	  </div><!-- END: footer -->
