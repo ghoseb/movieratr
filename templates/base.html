@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head profile="http://gmpg.org/xfn/11">
-    <title>{% block title %}Some title{% endblock title %}</title>
+    <title>{% block title %}Movieratr | Request, manage and rate your favourite movies{% endblock title %}</title>
     <!-- Source File -->
     <link rel="stylesheet" href="/static/css/blueprint/screen.css" type="text/css" media="screen,projection"/>
 	<link rel="stylesheet" href="/static/css/blueprint/print.css" type="text/css" media="print" />
@@ -25,7 +25,8 @@
 	  <!-- START: header -->
 	  <div id="header">
         {% block header %}
-		<h1>Header here</h1>
+		<h1><a href="http://movieratr.appspot.com/">Movieratr</a></h1>
+        <h5>Request, manage and rate your favourite movies</h5>
         {% endblock header %}
 	  </div><!-- END: header -->
       
@@ -33,7 +34,8 @@
 	  <div id="main-navigation">
         {% block navbar %}
 		<ul>
-		  <li><a href="#">Bla</a></li>
+		  <li><a href="/request/">Request a movie</a></li>
+		  <li><a href="/manage/">Manage movie lists</a></li>
 		</ul>
         {% endblock navbar %}
 	  </div><!-- END: main-navigation -->
@@ -41,21 +43,25 @@
 	  <!-- START: content -->
 	  <div id="content">
         {% block content %}
-		<h1>test h1</h1>
-		<p>Many people get frustrated when they try to create a web
-		  page simply because they don't do any planning. If you jump
-		  in and start writing HTML with no plan you may find yourself
-		  lost and so will your visitors. Before you start up your
-		  computer get out a pencil and some paper. Create a diagram
-		  that illustrates how your website will be layed out.</p>
-        
-		<p>Build your website one page at a time focusing on one
-		  topic per page. As you add new content expand your website
-		  diagram adding new pages in a logical order. This will make
-		  it much easier for you to build your site and for visitors
-		  to find their way around. If you follow a plan you will
-		  avoid leading viewers to blank pages, dead links or having
-		  them run in circles trying to navigate your website. </p>
+		<h1>Welcome!</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit. Integer ut risus. Cras eros augue, malesuada non,
+          pellentesque porttitor, placerat ut, lacus. Integer urna
+          lorem, porttitor ac, pretium ut, faucibus sit amet,
+          urna. Etiam lobortis, metus in dignissim feugiat, urna ligula
+          pellentesque ipsum, non adipiscing dui nulla eget nisi. Nunc
+          vulputate suscipit massa. Etiam a purus. Nunc dignissim. Fusce
+          et diam. Vivamus vestibulum mattis quam. Nam quam nisi,
+          molestie sed, imperdiet sed, sollicitudin sit amet,
+          est. Curabitur laoreet laoreet purus.</p>
+
+        <p>Etiam ut lectus nec nunc semper ultrices. Sed ultricies, pede vel
+          euismod auctor, felis tortor adipiscing sapien, ut
+          sollicitudin leo erat sit amet tortor. In hendrerit lorem
+          eget ante. In hac habitasse platea dictumst. Etiam
+          sodales. Praesent vel nisl nec ante condimentum
+          egestas. Vivamus et purus. Aenean accumsan porttitor
+          urna. Suspendisse urna. Etiam auctor dictum odio.</p> 
         {% endblock content %}
 	  </div><!-- END: content -->
       
@@ -63,10 +69,13 @@
 	  <div id="footer">
         {% block footer %}
 		<div class="span-19">
-		  <div class="footer-content">left column of footer</div>
+		  <div class="footer-content">
+            Copyright &copy; 2009 <a href="http://ghoseb.github.com">Baishampayan Ghose</a> and <a href="oCricket.com">oCricket.com</a><br />
+            This site is probably useful to the employees of <a href="oCricket.com">oCricket.com</a> only &#9785; <!-- sad face -->
+          </div>
 		</div>
-		<div class="span-5 last">
-		  <div class="footer-content">right column of footer</div>
+		<div class="span-4 last">
+		  <div class="footer-content"><img src="http://code.google.com/appengine/images/appengine-silver-120x30.gif" alt="Powered by Google App Engine" /></div>
 		</div>
         {% endblock footer %}
 	  </div><!-- END: footer -->
